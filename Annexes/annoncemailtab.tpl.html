@@ -1,0 +1,37 @@
+<html>
+    <head>
+       <meta charset="utf-8">
+        <link rel="stylesheet" href="css/style2.css" />
+    </head>
+        <body>
+            <!-- annoncemailtab.tpl.html -->
+            <div>
+                <span style="float: left; text-align: left">
+                    <a class="logbtnbis" href="accueilclient.php"> Retour au profil </a> 
+                </span>
+
+                <span style="float: center; text-align: center">
+                    <p class="logbtnbis">Liste des annonces disponibles</p>
+                </span>
+            </div>
+            
+            <table> 
+                <tr>
+                    <th>Titre</th>
+                    <th>Type d'emploi</th>
+                    <th>Code postal</th>
+                    <th>Descriptif de l'annonce</th>
+                    <th>Email du recruteur</th>
+                </tr>
+                <caption>{nom}</caption>
+                <!-- BEGIN ligne -->
+                <tr>
+                    <!-- BEGIN attribut -->
+                    <td>{ligne.attribut.valeur}</td>
+                    <!-- END attribut -->
+                    <td> <a href="mailto:">Email</a></td>
+                </tr>
+                <!-- END ligne -->
+            </table>
+        </body>
+</html>

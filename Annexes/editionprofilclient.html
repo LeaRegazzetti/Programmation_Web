@@ -1,0 +1,81 @@
+<html>
+    <head>
+       <meta charset="utf-8">
+        <link rel="stylesheet" href="css/style3.css" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" charset="utf-8"></script>
+
+    </head>
+        <body>
+            <!-- editionprofilclient.html -->
+
+                <span style="float: left; text-align: left">
+                    <a class="logbtnbis" href="accueilclient.php">Mon espace</a> 
+                </span>
+                <span style="float: right; text-align: right">
+                    <a class="logbtnbis" href="suppression.php">Supprimer le compte</a> 
+                </span>
+                <span style="float: center; text-align: center">
+                    <a class="logbtnbis">Edition du profil</a> 
+                </span>
+
+            
+                <form method="POST" action="editerprofilclient.php" class="login-form" enctype="multipart/form-data" >
+                    
+                    <p class="txtb">
+                        <label for="newprenom" class="left">Modifier le prénom</label>
+                        <input type="text" id="newprenom" name="newprenom" placeholder="Nouveau prénom" />
+                    </p>
+                    
+                    <p class="txtb">
+                        <label for="newnom" class="left">Modifier le nom</label>
+                        <input type="text" id="newnom" name="newnom" placeholder="Nouveau nom" />
+                    </p>
+                    
+                    <p class="txtb">
+                        <label for="newpwd" class="left">Modifier le mot de passe</label>
+                        <input type="password" id="newpwd" name="newpwd" placeholder="Nouveau mot de passe" />
+                    </p>
+                    
+                    <p class="txtb">
+                        <label for="adresse" class="left">Ajouter une adresse</label>
+                        <input type="text" id="adresse" name="adresse" placeholder="Adresse" />
+                    </p>
+                    
+                    <p class="txtb">
+                        <label for="cp" class="left">Ajouter un code postal</label>
+                        <input type="text" id="cp" name="cp" placeholder="Code postal" maxlength="5" />
+                    </p>
+                    
+                    <p class="txtb">
+                        <label for="ville" class="left">Ajouter une ville</label>
+                        <input type="text" id="ville" name="ville" placeholder="Ville" />
+                    </p>
+                    
+                    <p class="txtb">
+                        <label for="tel" class="left">Ajouter un numéro de téléphone</label>
+                        <input type="text" id="tel" name="tel" placeholder="Numéro de téléphone" maxlength="10"/>
+                    </p>
+                    
+                    <p class="txtb">
+                        <label for="cv" class="left">Ajouter un CV</label>
+                        <input type="file" id="cv" name="cv" placeholder="Curriculum Vitae" />
+                    </p>
+                    <br />
+                    
+                    <p>
+                        <input class="logbtn" type="submit" name="valider" value="Valider" />
+                    </p>
+                    
+                </form>
+            <script type="text/javascript">
+            $(".txtb input").on("focus",function(){
+            $(this).addClass("focus");
+            });
+
+            $(".txtb input").on("blur",function(){
+            if($(this).val() == "")
+            $(this).removeClass("focus");
+            });
+      </script>
+        </body>
+</html>

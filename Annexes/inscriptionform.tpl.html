@@ -1,0 +1,50 @@
+<html>
+    <head>
+       <meta charset="utf-8">
+        <title>Annonces d'emplois et de stages</title>
+        <link rel="stylesheet" href="css/style1.css" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" charset="utf-8"></script>
+    </head>
+        <body>
+            <!-- inscriptionform.tpl.html -->
+            <form action="inscription.php" method="post" class="login-form">
+
+                <h1> Inscription </h1>
+                
+                <input type="hidden" name="suivant" value="{suivant}" />
+                
+                <p class="txtb">
+                    <input type="text" id="prenom" name="prenom">
+                    <span data-placeholder="Prénom"></span>
+                </p>
+                
+                <p class="txtb">
+                    <input type="text" id="nom" name="nom">
+                    <span data-placeholder="Nom"></span>
+                </p>
+                
+                
+                <p class="txtb">
+                    <input type="email" id="email" name="email">
+                    <span data-placeholder="Email"></span>
+                </p>
+                
+                <p class="txtb">
+                    <input type="password" id="pwd" name="pwd">
+                    <span data-placeholder="Mot de passe "></span>
+                </p>
+                
+                <input type="submit" class="logbtn" name="inscription" value="Inscription" />   
+        </form> 
+        <script type="text/javascript">
+            $(".txtb input").on("focus",function(){
+            $(this).addClass("focus");
+            });
+
+            $(".txtb input").on("blur",function(){
+            if($(this).val() == "")
+            $(this).removeClass("focus");
+            });
+      </script>
+    </body>
+</html>

@@ -1,0 +1,41 @@
+<html>
+    <head>
+       <meta charset="utf-8">
+        <link rel="stylesheet" href="css/style2.css" />
+    </head>
+        <body>
+            <!-- mesannoncestab.tpl.html -->
+            <div>
+                <span style="float: left; text-align: left">
+                    <a class="logbtnbis" href="accueilemp.php">Mon espace</a> 
+                </span>
+                <span style="float: right; text-align: right">
+                    <a class="logbtnbis" href="editionprofilemp.html">Edition du profil</a> 
+                </span>
+                <span style="float: center; text-align: center">
+                    <p class="logbtnbis">Mes annonces</p>
+                </span>
+                
+            </div>
+            
+            <table> 
+                <tr>
+                    <th>Titre</th>
+                    <th>Type d'emploi</th>
+                    <th>Code postal</th>
+                    <th>Descriptif</th>
+                </tr>
+                <caption>{nom}</caption>
+                <!-- BEGIN ligne -->
+                <tr>
+                    <!-- BEGIN attribut -->
+                    <td>{ligne.attribut.valeur}</td>
+                    <!-- END attribut -->
+                    <td> <a href="{cible}?suivant=suppr&amp;ID_annonce={ligne.ID_annonce}">Effacer</a></td>
+                </tr>
+                <!-- END ligne -->
+            </table>
+
+            <p><a href="annonceform.tpl.html">Nouvelle annonce</a></p> <hr />
+        </body>
+</html>

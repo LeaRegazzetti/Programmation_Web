@@ -1,0 +1,46 @@
+<html>
+    <head>
+       <meta charset="utf-8">
+        <link rel="stylesheet" href="css/style2.css" />
+
+    </head>
+        <body>
+            <!-- clienttab.tpl.html -->
+            <div>
+                <span style="float: left; text-align: left">
+                    <a class="logbtnbis" href="deconnexion.php">Déconnexion</a> 
+                </span>
+                <span style="float: right; text-align: right">
+                    <a  class="logbtnbis" href="editionprofilclient.html"> Editer mon profil </a>
+                </span>
+                <span style="float: center; text-align: center">
+                    <a class="logbtnbis">Mes informations</a>
+
+                </span>
+                
+            </div>
+            
+            <table> 
+             <tr>
+                    <th>Prénom</th>
+                    <th>Nom</th>
+                    <th>Email</th>
+                    <th>Adresse</th>
+                    <th>Code postal</th>
+                    <th>Ville</th>
+                    <th>Téléphone</th>
+                </tr>
+                <caption>{nom}</caption>
+                <!-- BEGIN ligne -->
+                <tr>
+                    <!-- BEGIN attribut -->
+                    <td>{ligne.attribut.valeur}</td>
+                    <!-- END attribut -->
+                </tr>
+                <!-- END ligne -->
+            </table>
+            <span style="float: center; text-align: center">
+                    <a class="contact" href="annoncemail.php">Pour accéder à la liste des annonces avec les adresses mails des recruteurs cliquez ici</a>
+            </span>
+        </body>
+</html>
